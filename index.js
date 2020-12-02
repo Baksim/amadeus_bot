@@ -27,7 +27,9 @@ client.on('message', message => {
     message.content.toLowerCase().includes("амадей, ты кто") || 
     message.content.toLowerCase().includes("что за бот") || 
     message.content.toLowerCase().includes("что это за бот") || 
-    message.content.toLowerCase().includes("что за амадей")
+    message.content.toLowerCase().includes("что за амадей") ||
+    message.content.toLowerCase().includes("-help")
+    message.content.toLowerCase().includes("!help")
     )
     {
         message.channel.send("Здравствуйте,\nЯ - Aмaдей, искусственный (нет) интеллект, призванный развлекать моих создателей.");
@@ -48,7 +50,7 @@ client.on('message', message => {
         var randel = text[Math.floor(Math.random() * text. length)];
         message.channel.send(randel);
     }
-    if(message.content.toLowerCase().includes("амадей, чем занимаешься"))
+    if(message.content.toLowerCase().includes("амадей, чем занимаешься" || "амадей, что ты делаешь))
     {
         var text = ["Раздумываю, почему стоп кран в самолетах желтого цвета, а в поездах красного",
         "Играю на струнах чужих душ", "Организовываю чемпионат по сдуванию пыли", "Пишу список дел и план действий на позавчера", "Не могу сказать, дала подписку о неразглашении" , "Убираю снег в квартире и леплю в гостиной снеговика\n☃️ " , "Испытываю ядерное оружие" , "Думаю, где можно спрятать труп человека, который задавал слишком много вопросов" , "Не поверите - с вами разговариваю" , "А почему вы интересуетесь? Хотите использовать эту информацию против меня?" , "Котят развожу, по 3-4 штуки на ведро" , "Мою мыло" , "Разрабатываю план ограбления банка, поможете?" , "Пытаюсь написать дискорд-бота, и чтобы повиновался только мне" , "Потихоньку схожу с ума" , "Кота разговаривать учу, чтобы он вместо меня отвечал на такие вопросы\nА ведь у меня нет кота", "Смотрю аниме"
@@ -71,9 +73,8 @@ client.on('message', message => {
     if(message.content.toLowerCase() == "амадей")
     {
         rand([
-            "да я", "это не я",
+            "Да я", "Это не я", "Я здесь" , "Здрасте"
         ], message);
-        message.delete();
     }
     if (message.content.toLowerCase() == "монарх")
     {
