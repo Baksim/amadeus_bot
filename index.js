@@ -219,6 +219,10 @@ client.on('message', message => {
             "«Ты последняя задница, Рон Уизли»","«AVADA KEDAVRA»","«LUMOS»","«EVER»"
         ], message);
     }
+    if (message.content.toLowerCase().includes("амадей, кто я"))
+    {
+        message.channel.send(message.author.username);
+    }
     if (message.content.toLowerCase() == "амадей, погода")
     {
         // fetch("http://api.openweathermap.org/data/2.5/forecast?id=456173&0ec47a7cafa77f35fe70da6e2fec975c")
