@@ -79,7 +79,7 @@ client.on('message', message => {
     if (message.content.toLowerCase() == "монарх")
     {
         rand([
-            "<:monarch:782688900178247681>", "нет, блин, император", "тута", "погоди, я переобуваюсь в воздухе", "погоди, я пытаюсь тебя игнорировать", "я тебя слушаю", "я имею возможность по средствам двухстороннехо контакта путём взаимодействия символов из таблицы ASCII принять от вашей стороны информацию, которую ваша сторона путём вызова моей команды старается мне невербально сообщить", "Макс(думоет)", "хватит со мной общатся, иди погуляй", "Я в своем познании настолько преисполнился, что я как будто бы уже сто триллионов миллиардов лет проживаю на триллионах и триллионах таких же планет, как эта Земля, мне этот мир абсолютно понятен, и я здесь ищу только одного - покоя, умиротворения и вот этой гармонии, от слияния с бесконечно вечным, от созерцания великого фрактального подобия и от вот этого замечательного всеединства существа, бесконечно вечного, куда ни посмотри, хоть вглубь - бесконечно малое, хоть ввысь - бесконечное большое, понимаешь?", "гы", "монарх", "'ну Пайтон так Пайтон' @Монарх", "хватит меня буллить", "True или False - вот в чем вопрос?", "монарх есть монарх"
+            "<:monarch:782688900178247681>", "нет, блин, император", "тута", "погоди, я переобуваюсь в воздухе", "погоди, я пытаюсь тебя игнорировать", "я тебя слушаю", "я имею возможность по средствам двухстороннехо контакта путём взаимодействия символов из таблицы ASCII принять от вашей стороны информацию, которую ваша сторона путём вызова моей команды старается мне невербально сообщить", "Макс(думоет)", "хватит со мной общатся, иди погуляй", "Я в своем познании настолько преисполнился, что я как будто бы уже сто триллионов миллиардов лет проживаю на триллионах и триллионах таких же планет, как эта Земля, мне этот мир абсолютно понятен, и я здесь ищу только одного - покоя, умиротворения и вот этой гармонии, от слияния с бесконечно вечным, от созерцания великого фрактального подобия и от вот этого замечательного всеединства существа, бесконечно вечного, куда ни посмотри, хоть вглубь - бесконечно малое, хоть ввысь - бесконечное большое, понимаешь?", "гы", "монарх", "'ну Пайтон так Пайтон' @Монарх", "хватит меня буллить", "True или False - вот в чем вопрос?", "монарх есть монарх", "а монарх на шаг впереди"
         ], message);
         message.delete();
     }
@@ -109,13 +109,25 @@ client.on('message', message => {
         message.channel.send('"... не все уёб&ща, там очень мало таких, бл&ть, не очень мало, бл&ть..." ©Алехандро');
         message.delete();
     }    
-    if (message.content.toLowerCase() == "узнали")
+    if (message.content.toLowerCase().includes("узнали"))
     {
         rand([
             "согласны", "соглали",
         ], message);
     }
-    if (message.content.toLowerCase() == "согласны")
+    if (message.content.toLowerCase().includes("согласны"))
+    {
+        rand([
+            "узнали", "узнасны",
+        ], message);
+    }
+    if (message.content.toLowerCase().includes("узнасны"))
+    {
+        rand([
+            "согласны", "соглали",
+        ], message);
+    }
+    if (message.content.toLowerCase().includes("соглали"))
     {
         rand([
             "узнали", "узнасны",
@@ -145,7 +157,7 @@ client.on('message', message => {
     if (message.content.toLowerCase() == "чел ты")
     {
         rand([
-            "<:nobully:783049091424059413>", "задавайте вопросы", "у матросов нет вопросов", "Я тебе что, какая-то шутка?"
+            "<:nobully:783049091424059413>", "задавайте вопросы", "у матросов нет вопросов", "Я тебе что, какая-то шутка?", "ой, как повезло, они подряд идут", "оставим питону это удовольствие", "логическая бомба готова"
         ], message);
         message.delete();
     }
@@ -174,6 +186,10 @@ client.on('message', message => {
         message.channel.send("я она");
         message.channel.send("<:kurisu:783293608102723586>");
     }
+    if (message.content.toLowerCase() == "вопросы" || message.content.toLowerCase() == "вопросы?")
+    {
+        message.channel.send("у матросов нет вопросов");
+    }
     if(message.content.toLowerCase().includes("амадей, фас") || message.content.toLowerCase().includes("амадей, апорт") || message.content.toLowerCase().includes("амадей, сидеть") || message.content.toLowerCase().includes("амадей, голос") || message.content.toLowerCase().includes("амадей, кувырок"))
     {
         message.channel.send("Я вам не собака,\nПроявите хоть немного уважения!");
@@ -201,10 +217,31 @@ client.on('message', message => {
         // .then(response => {
         //     message.channel.send(response.json());
         // });
-        axios.get('http://api.openweathermap.org/data/2.5/forecast?id=456173&0ec47a7cafa77f35fe70da6e2fec975c')
+        axios.get('http://api.openweathermap.org/data/2.5/forecast?id=456173&appid=0ec47a7cafa77f35fe70da6e2fec975c')
         .then(function (response) {
             // handle success
             console.log(response);
+            const exampleEmbed = new Discord.MessageEmbed()
+            .setColor('#0099ff')
+            .setTitle('Погода')
+            .setAuthor('Амадей')
+            .setDescription('Погода, понятно?')
+            .addFields(
+                { name: 'Здесь будет погода', value: 'Температура в городе ' + response.data.city.name + ' по состоянию на ' + response.data.list[(response.data.list.length) - 1].dt_txt + ': ' + Math.round(response.data.list[(response.data.list.length) - 1].main.temp - 273) + ' °C' },
+                { name: '\u200B', value: '\u200B' },
+                { name: 'Узнали?', value: 'Согласны?', inline: true },
+                { name: 'Узнасны?', value: 'Соглали?', inline: true },
+            )
+            // for(i = 0; i < response.data.list.length; i++) {
+            //     .addField('Inline field title', 'Some value here', true)
+            // }
+            // .setTimestamp()
+            .attachFiles(['images/avi.jpg'])
+            .setThumbnail('attachment://avi.jpg')
+            .setFooter('От Амадей');
+            
+            message.channel.send(exampleEmbed);
+            //message.channel.send('Температура в городе ' + response.data.city.name + ' по состоянию на ' + response.data.list[0].dt_txt + ': ' + Math.round(response.data.list[0].main.temp - 273) + ' °C') ;
         })
         .catch(function (error) {
             // handle error
@@ -213,6 +250,7 @@ client.on('message', message => {
         .then(function () {
             // always executed
         });
+        //message.channel.send("Мать не сделала, чтобы я выводила погоду в чат, поэтому погода пока что только в консоли. Ничего личного");
     }
     if (message.content.toLowerCase() == "амадей, сыграй")
     {

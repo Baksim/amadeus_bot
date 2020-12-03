@@ -1,0 +1,68 @@
+C:\Program Files\nodejs\node.exe .\index.js
+Client is ready!
+ index.js
+null: {status: 200, statusText: 'OK', headers: {…}, config: {…}, request: ClientRequest, …}
+config: {url: 'http://api.openweathermap.org/data/2.5/forecas…=456173&appid=0ec47a7cafa77f35fe70da6e2fec975c', method: 'get', headers: {…}, transformRequest: Array(1), transformResponse: Array(1), …}
+data: {cod: '200', message: 0, cnt: 40, list: Array(40), city: {…}}
+city: {id: 456173, name: 'Rīga', coord: {…}, country: 'LV', population: 0, …}
+coord: {lat: 57, lon: 24.0833}
+country: 'LV'
+id: 456173
+name: 'Rīga'
+population: 0
+sunrise: 1606977644
+sunset: 1607003209
+timezone: 7200
+__proto__: Object
+cnt: 40
+cod: '200'
+list: (40) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+0: {dt: 1606986000, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+1: {dt: 1606996800, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+2: {dt: 1607007600, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+3: {dt: 1607018400, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+4: {dt: 1607029200, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+5: {dt: 1607040000, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+6: {dt: 1607050800, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+7: {dt: 1607061600, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+8: {dt: 1607072400, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+9: {dt: 1607083200, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+10: {dt: 1607094000, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+11: {dt: 1607104800, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+12: {dt: 1607115600, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+13: {dt: 1607126400, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+14: {dt: 1607137200, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+15: {dt: 1607148000, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+16: {dt: 1607158800, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+17: {dt: 1607169600, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+18: {dt: 1607180400, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+19: {dt: 1607191200, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+20: {dt: 1607202000, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+21: {dt: 1607212800, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+22: {dt: 1607223600, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+23: {dt: 1607234400, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+24: {dt: 1607245200, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+25: {dt: 1607256000, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+26: {dt: 1607266800, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+27: {dt: 1607277600, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+28: {dt: 1607288400, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+29: {dt: 1607299200, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+30: {dt: 1607310000, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+31: {dt: 1607320800, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+32: {dt: 1607331600, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+33: {dt: 1607342400, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+34: {dt: 1607353200, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+35: {dt: 1607364000, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+36: {dt: 1607374800, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+37: {dt: 1607385600, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+38: {dt: 1607396400, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+39: {dt: 1607407200, main: {…}, weather: Array(1), clouds: {…}, wind: {…}, …}
+length: 40
+__proto__: Array(0)
+message: 0
+__proto__: Object
+headers: {server: 'openresty', date: 'Thu, 03 Dec 2020 06:31:03 GMT', content-type: 'application/json; charset=utf-8', content-length: '15576', connection: 'close', …}
+request: ClientRequest {_events: {…}, _eventsCount: 7, _maxListeners: undefined, outputData: Array(0), outputSize: 0, …}
+status: 200
+statusText: 'OK'
+__proto__: Object
