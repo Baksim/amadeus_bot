@@ -194,6 +194,10 @@ client.on('message', message => {
         message.channel.send("я она");
         message.channel.send("<:kurisu:783293608102723586>");
     }
+    if (message.content.toLowerCase().includes("амадей, кто я"))
+    {
+        message.channel.send(message.author.username);
+    }
     if (message.content.toLowerCase() == "вопросы" || message.content.toLowerCase() == "вопросы?")
     {
         message.channel.send("у матросов нет вопросов");
