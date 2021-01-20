@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const config = require("./config.json");
 const ytdl = require('ytdl-core');
 const client = new Discord.Client();
-
+//Proverajem
 client.login(config.token);
 
 client.on('ready', () => {
