@@ -4,7 +4,7 @@ const ytdl = require('ytdl-core');
 const client = new Discord.Client();
 
 client.login(config.token);
-//test
+//test, opjatj
 client.on('ready', () => {
     client.channels.fetch("781131196792569886").then(channel => {
         channel.messages.fetch();
